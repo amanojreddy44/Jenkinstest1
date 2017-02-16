@@ -1,0 +1,24 @@
+<project name="JenkinsProject" default="how">
+	
+	<target name = "abc">
+	<echo> This is Testing </echo>
+	</target>
+
+	<target name="init" depends="abc">
+		 <delete dir="build"/>
+	</target>
+	
+	<target name="hi" depends="init">
+		<mkdir dir="build/classes"/>
+	</target>
+	
+	<target name="how" depends="hi">
+	 <javac srcdir="src"
+         destdir="build/classes"
+         debug="on"
+    />
+	</target>
+
+	
+	
+</project>
